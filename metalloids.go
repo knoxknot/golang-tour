@@ -1,3 +1,4 @@
+/*
 package main
 
 import (
@@ -54,3 +55,4 @@ func main() {
 		fmt.Printf("%-10s	%-10d	%-10.3f	%e\n", m.name, m.number, m.weight.float(), atoms(moles(m.weight)))
 	}	
 }
+*/

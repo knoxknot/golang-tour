@@ -1,3 +1,4 @@
+/*
 package main
 
 import (
@@ -7,3 +8,4 @@ import (
 func main() {
 	fmt.Println("Hello Go!")
 }
+*/
