@@ -5,6 +5,6 @@ Please check this article for setting up a go development environment for an ubu
 
  # hello.go
 
-Now that we have written this snippet to print "Hello Go!" at our terminal. We have two ways to run this application
-  - ```go run src/github.com/knoxknot/golang-tour/hello.go```   this runs the hello.go program and you see output on the fly
-  - <code>go build github.com/knoxknot/golang-tour/</code> we usually use to to build several go packages into a single binary file. Then enter the file name and hit the return button to run.<quote> note we omitted the "src" path name. </quote>
+Having written this snippet to print "Hello Go!" at our terminal, we have two ways to run this application.
+  - ```go run src/github.com/knoxknot/golang-tour/hello.go```   this runs and returns an output for the hello.go program.
+  - <code>go build github.com/knoxknot/golang-tour/</code> This builds several go packages into a single binary. Then we enter the binary name at the termninal and hit return to run.<aside> note that we omitted the "src" path name. </aside>
