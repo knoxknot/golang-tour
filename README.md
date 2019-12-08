@@ -3,7 +3,10 @@ Learning Go and cool tricks discovered journeying on this path
 
 Please check this [article](https://medium.com/@nwoyesamuelc/a-neater-go-local-development-environment-hello-go-9ba77598f7b4) for setting up a go development environment on an ubuntu distro. Or use the [go ansible role](https://github.com/knoxknot/ansible-roles.git) from this repository to set up if you already have ansible installed.
 
+I have also added 1 to every go filename to avoid conflicting with the current file worked on at any given time. Thus to run that source file as a go program simply remove the 1 behind the .go extension. Please do note also that since the intention was a successive tutorial of showing the design and concept of go language, each of these files have a main function which will conflict with another if both files are in .go extensions.  
+
 **Tips and Tricks**
+
 
 
  # hello.go
