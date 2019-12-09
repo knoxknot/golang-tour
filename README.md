@@ -6,7 +6,7 @@ Please check this [article](https://medium.com/@nwoyesamuelc/a-neater-go-local-d
 I have also added 1 to every go filename to avoid conflicting with the current file worked on at any given time. Thus to run that source file as a go program simply remove the 1 behind the .go extension. Please do note also that since the intention was a successive tutorial of showing the design and concept of go language, each of these files have a main function which will conflict with another if both files are in .go extensions.  
 
 **Tips and Tricks**
-
+ git request-pull master origin dev
 
 
  # hello.go
