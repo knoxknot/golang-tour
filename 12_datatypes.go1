@@ -1,0 +1,109 @@
+package main 
+
+import (
+	"fmt"
+	"unsafe"
+)
+
+var (
+	a uint8 = 72
+	b int32 = 240
+	c uint64 = 1234564321
+	d float32 = 12432345.232
+	e int64 = - 1233453443434
+	f float64 = -1.43555622362467
+	g int16 = 3200
+	h [5]rune = [5]rune{'O','n','T','o','p'}
+)
+
+func sliceLoop() {
+	vals := []int{
+		1024,0x0FF1CE,0x8BADF00D,0xBEEF,0777,
+	}
+	for _, v := range vals {
+		if v == 0xBEEF {
+			fmt.Printf("Got %d\n", v)
+			break
+		}
+	}
+}
+
+func complxOp() {
+	a := -3.5 + 2i
+	fmt.Printf("%v\n", a)
+	fmt.Printf("%+g, %+g\n", real(a), imag(a))
+}
+
+func booleanOp() {
+	var readyToGo bool
+	if !readyToGo {
+		fmt.Println("Come on")
+	} else {
+		fmt.Println("Let's go!")
+	}
+}
+
+func runeOp() {
+	var (
+		bksp = '\b'
+		tab = '\t'
+		nwln = '\n'
+		char1 = 'ɸ'
+		char2 = 'আ'
+		char3 = '語'
+		char4 = '\u0369'
+		char5 = '\xFA'
+		char6 = '\045'
+		char7 = '*'
+	)
+
+	fmt.Println(bksp)
+	fmt.Println(tab)
+	fmt.Println(nwln)
+	fmt.Println(char1)
+	fmt.Println(char2)
+	fmt.Println(char3)
+	fmt.Println(char4)
+	fmt.Println(char5)
+	fmt.Println(char6)
+	fmt.Println(char7)
+}
+
+func pointerOp() {
+	var valPtr *float32
+	var countPtr *int
+	var person *struct {
+		name string
+		age int
+	}
+	var matrix *[1024]int
+	var row []*int64
+
+	fmt.Println(valPtr,countPtr, person, matrix, row)
+}
+
+func pointerOp2() {
+	var a int = 1024
+	var aptr *int = &a
+	
+	fmt.Printf("a=%v\n", a)
+	fmt.Printf("aptr=%v\n", aptr)
+}
+
+
+func main() {
+	fmt.Printf("a = %v [%T, %d bits]\n", a, a, unsafe.Sizeof(a)*8)
+	fmt.Printf("b = %v [%T, %d bits]\n", b, b, unsafe.Sizeof(b)*8)
+	fmt.Printf("c = %v [%T, %d bits]\n", c, c, unsafe.Sizeof(c)*8)
+	fmt.Printf("d = %v [%T, %d bits]\n", d, d, unsafe.Sizeof(d)*8)
+	fmt.Printf("e = %v [%T, %d bits]\n", e, e, unsafe.Sizeof(e)*8)
+	fmt.Printf("f = %v [%T, %d bits]\n", f, f, unsafe.Sizeof(f)*8)
+	fmt.Printf("g = %v [%T, %d bits]\n", g, g, unsafe.Sizeof(g)*8)
+	fmt.Printf("h = %v [%T, %d bits]\n", h, h, unsafe.Sizeof(h)*8)
+	sliceLoop()
+	complxOp()
+	booleanOp()
+	runeOp()
+	pointerOp()
+	pointerOp2()
+}
